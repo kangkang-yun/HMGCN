@@ -176,9 +176,6 @@ class HMGCN(RecModel):
         self.lam_hat = 0.9
         self.lam = 1 / self.lam_hat - 1
         self.prop_layer_num = 3
-        self.att_alpha = 0.01
-        self.att_beta = 1000.0
-        self.w: callable = self.get_mcp_att_func(alpha=self.att_alpha, beta=self.att_beta)  # W = d_{y^2} \rho(y)
         self.eta = None
         self.lambda_ = config['lambda']
 
